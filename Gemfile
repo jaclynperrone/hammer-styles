@@ -16,3 +16,6 @@ gem "tzinfo-data", platforms: [:mswin, :mingw, :jruby]
 # Bootstrap
 gem "bootstrap-sass", "~> 3.3.5"
 gem "sass-rails", ">= 3.2"
+
+# Slim
+gem "slim"
