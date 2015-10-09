@@ -3,14 +3,29 @@
 
 @charset "utf-8";
 
+* {
+	box-sizing: border-box;
+}
+
 .content {
   @extend .row;
 }
 
 .navigation {
-  @extend .col-md-3;
+  @extend .col-md-2;
 }
 
 .styles {
-  @extend .col-md-9;
+  @extend .col-md-10;
+}
+
+/* Navigation */
+
+.navigation-items {
+	padding: 0;
+	list-style: none;
+	li {
+		display: block;
+		line-height: 1.5em;
+	}
 }
