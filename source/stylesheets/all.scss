@@ -1,10 +1,41 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "variables";
 
 @charset "utf-8";
 
+body {
+	font-size: 16px;
+	background-color: $color-bg-body;
+	color: $color-text;
+	font-family: "Open Sans", helvetica, arial, sans-serif;
+
+}
+
 * {
 	box-sizing: border-box;
+}
+
+.header {
+	padding: 0.25em 0;
+  background: $color-white-smoke;
+  border-bottom: 1px solid $color-border-light;
+  margin-bottom: 1em;
+}
+
+.header-text {
+	margin: 0;
+  font-size: 1em;
+  display: inline-block;
+}
+.header-logo {
+	text-indent: -9999px;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-image: url('../images/cycle-dash.png');
+  background-size: 22px;
+  margin-right: 1em;
 }
 
 .content {
@@ -16,16 +47,53 @@
 }
 
 .styles {
-  @extend .col-md-10;
+  @extend .col-md-10, %card;
 }
 
-/* Navigation */
+section {
+	margin-bottom: 1em;
+	border-bottom: 1px solid $color-border-light;
+	padding-bottom: 2em;
+}
+
+/* Left-side navigation */
 
 .navigation-items {
 	padding: 0;
 	list-style: none;
 	li {
 		display: block;
-		line-height: 1.5em;
+		line-height: 2em;
 	}
 }
+
+/* Elements and styles */
+
+%card {
+  background-color: $color-white-smoke;
+  border-radius: $radius;
+  box-shadow: 1px 1px 1px 0px $color-bg-body-dark;
+  border: 1px solid $color-border-light;
+}
+
+.card-body, .card-header {
+  padding: 1rem;
+}
+.card-header {
+	border-bottom: 1px solid $color-border-light;
+}
+
+/* Buttons */
+
+.btn-primary {
+  color: $color-white;
+  background-color: $color-blue-sinai;
+  border-color: darken($color-blue-sinai, 10%);
+  &:hover, &:active, &:focus {
+    background-color: darken($color-blue-sinai, 5%);
+    border-color: darken($color-blue-sinai, 10%);
+    color: $color-white;
+  }
+}
+
+

@@ -1,0 +1,31 @@
+$color-black: #333;
+$color-blue-sinai: #1DACE9;
+$color-gray-light: #ddd;
+$color-gray-medium: #adadad;
+$color-beige-light: #f0efee;
+$color-green: #5cb85c;
+$color-red: #f32d2d;
+$color-white: #fff;
+$color-white-smoke: #fcfcfc;
+
+
+////////////////////////////////
+
+
+$color-bg-body: $color-beige-light;
+$color-bg-body-dark: darken($color-bg-body, 3%);
+
+$color-bg-hover: lighten($color-blue-sinai, 45%);
+$color-bg-expanded: lighten($color-blue-sinai, 45%);
+
+$color-status-success: $color-green;
+$color-status-error: $color-red;
+
+$color-text: $color-black;
+$color-text-dim: $color-gray-medium;
+
+$color-link: $color-blue-sinai;
+
+$color-border-light: $color-gray-light;
+
+$radius: 4px;

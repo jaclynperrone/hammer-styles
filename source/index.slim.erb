@@ -1,12 +1,13 @@
 ---
 title: Cycledash Style Guide
 ---
-
+.header
+	.container
+		a.header-logo href="#" Cycledash
+		h1.header-text Cycledash Style Guide
 .container
-	.header
-		h1 Cycledash Style Guide
 	.content
-	  .navigation
+		.navigation
 			ul.navigation-items
 				li
 					a href="#buttons" Buttons
@@ -31,15 +32,45 @@ title: Cycledash Style Guide
 				li
 					a href="#comments" Comments
 
-	  .styles
-			h2#buttons Buttons
-			h2#colors Colors
-			h2#form-inputs Form Inputs
-			h2#icons Icons
-			h2#links Links
-			h2#modals Modals
-			h2#states States
-			h2#tables Tables
-			h2#typography Typography
-			h2#projects Projects
-			h2#comments Comments
+		.styles
+			section
+				h2#buttons Buttons
+				.row
+					.col-md-6
+						h3 Primary
+						button.btn.btn-primary Default
+						button.btn.btn-primary.btn-xs Extra small
+						h3 Success
+						button.btn.btn-success Default
+
+					.col-md-6
+						h3 Secondary
+						button.btn.btn-default Default
+						button.btn.btn-default.btn-xs Extra small
+
+
+						h3 + Glyphicon
+						button.btn.btn-primary.btn-xs
+							span.glyphicon.glyphicon-save aria-hidden="true"
+							|  Save glyphicon
+
+			section
+				h2#colors Colors
+			section
+				h2#form-inputs Form Inputs
+			section
+				h2#icons Icons
+			section
+				h2#links Links
+			section
+				h2#modals Modals
+			section
+				h2#states States
+			section
+				h2#tables Tables
+			section
+				h2#typography Typography
+			section
+				h2#projects Projects
+			section
+				h2#comments Comment
