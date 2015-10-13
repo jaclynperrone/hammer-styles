@@ -33,33 +33,141 @@ title: Cycledash Style Guide
 					a href="#comments" Comments
 
 		.styles
-			section
+			section.buttons
 				h2#buttons Buttons
-				.row
-					.col-md-6
-						h3 Primary
-						button.btn.btn-primary Default
-						button.btn.btn-primary.btn-xs Extra small
-						h3 Success
-						button.btn.btn-success Default
+				.component
+					h3 Primary
+					p Some text explaining what this is for
+					button.btn.btn-primary Default
+					button.btn.btn-primary.btn-xs Extra small
+				.component
+					h3 Success
+					p Some text explaining what this is for
+					button.btn.btn-success Default
+				.component
+					h3 Secondary
+					p Some text explaining what this is for. Some text explaining what this is for
+					button.btn.btn-default Default
+					button.btn.btn-default.btn-xs Extra small
+				.component
+					h3 + Glyphicon
+					p Some text explaining what this is for
+					button.btn.btn-primary.btn-xs
+						span.glyphicon.glyphicon-save aria-hidden="true"
+						|  Save glyphicon
 
-					.col-md-6
-						h3 Secondary
-						button.btn.btn-default Default
-						button.btn.btn-default.btn-xs Extra small
-
-
-						h3 + Glyphicon
-						button.btn.btn-primary.btn-xs
-							span.glyphicon.glyphicon-save aria-hidden="true"
-							|  Save glyphicon
-
-			section
+			section.colors
 				h2#colors Colors
+				.component
+					.row
+						.col-md-4
+							.swatch
+								.swatch-preview.color-black
+								ul.swatch-details
+									li #333
+									li $color-black
+						.col-md-4
+							.swatch
+								.swatch-preview.color-gray-medium
+								ul.swatch-details
+									li #adadad
+									li $color-gray-medium
+						.col-md-4
+							.swatch
+								.swatch-preview.color-gray-light
+								ul.swatch-details
+									li #ddd
+									li $color-gray-light
+				.component									
+					.row
+						.col-md-4
+							.swatch
+								.swatch-preview.color-beige-light
+								ul.swatch-details
+									li #f0efee
+									li $color-beige-light
+						.col-md-4
+							.swatch
+								.swatch-preview.color-white-smoke
+								ul.swatch-details
+									li #fcfcfc
+									li $color-white-smoke
+						.col-md-4
+							.swatch
+								.swatch-preview.color-white
+								ul.swatch-details
+									li #fff
+									li $color-white
+				.component									
+					.row
+						.col-md-4
+							.swatch
+								.swatch-preview.color-blue-sinai
+								ul.swatch-details
+									li #1DACE9
+									li $color-blue-sinai
+						.col-md-4
+							.swatch
+								.swatch-preview.color-green
+								ul.swatch-details
+									li #5cb85c
+									li $color-green
+						.col-md-4
+							.swatch
+								.swatch-preview.color-red
+								ul.swatch-details
+									li #f32d2d
+									li $color-red
+
 			section
 				h2#form-inputs Form Inputs
+				p Some text here.
+				.component
+					.row
+						.col-md-6
+						  label.control-label Project Name
+						  input.form-control placeholder="PT01234" type="text"
+
 			section
 				h2#icons Icons
+				p Some text here.
+				.component
+					.icon-list
+						li 
+							span.glyphicon.glyphicon-remove aria-hidden="true" 
+							span  Close/Error
+						li 
+							span.glyphicon.glyphicon-comment aria-hidden="true" 
+							span  Comments
+						li 
+							span.glyphicon.glyphicon-question-sign aria-hidden="true" 
+							span  Help
+						li 
+							span.glyphicon.glyphicon-arrow-right aria-hidden="true" 
+							span  Next
+						li 
+							span.glyphicon.glyphicon-arrow-left aria-hidden="true" 
+							span  Previous
+						li 
+							span.glyphicon.glyphicon-save aria-hidden="true" 
+							span  Save/Download
+						li 
+							span.glyphicon.glyphicon-search aria-hidden="true" 
+							span  Search
+						li 
+							span.glyphicon.glyphicon-star aria-hidden="true" 
+							span  Starred
+						li 
+							span.glyphicon.glyphicon-star-empty aria-hidden="true" 
+							span  Unstarred
+						li 
+							span.glyphicon.glyphicon-zoom-in aria-hidden="true" 
+							span  Zoom in
+						li 
+							span.glyphicon.glyphicon-zoom-out aria-hidden="true" 
+							span  Zoom out
+
+
 			section
 				h2#links Links
 			section

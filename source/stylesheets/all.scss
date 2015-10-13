@@ -9,12 +9,34 @@ body {
 	background-color: $color-bg-body;
 	color: $color-text;
 	font-family: "Open Sans", helvetica, arial, sans-serif;
-
 }
 
 * {
 	box-sizing: border-box;
 }
+
+li {
+  line-height: 2em;
+}
+
+a {
+  color: $color-link;
+  &:hover {
+    text-decoration: none;
+    color: darken($color-link, 15%);
+  }
+}
+
+%clean-ul {
+  list-style: none;
+  padding: 0;
+}
+
+.content {
+  @extend .row;
+}
+
+/* Header */
 
 .header {
 	padding: 0.25em 0;
@@ -28,6 +50,7 @@ body {
   font-size: 1em;
   display: inline-block;
 }
+
 .header-logo {
 	text-indent: -9999px;
   display: inline-block;
@@ -38,36 +61,25 @@ body {
   margin-right: 1em;
 }
 
-.content {
-  @extend .row;
-}
+/* Left-side navigation */
 
 .navigation {
   @extend .col-md-2;
 }
 
-.styles {
-  @extend .col-md-10, %card;
-}
-
-section {
-	margin-bottom: 1em;
-	border-bottom: 1px solid $color-border-light;
-	padding-bottom: 2em;
-}
-
-/* Left-side navigation */
-
 .navigation-items {
-	padding: 0;
-	list-style: none;
+  @extend %clean-ul;
+
 	li {
 		display: block;
-		line-height: 2em;
 	}
 }
 
-/* Elements and styles */
+.component {
+  margin-top: 2em;
+}
+
+/* Styleguide content */
 
 %card {
   background-color: $color-white-smoke;
@@ -76,14 +88,26 @@ section {
   border: 1px solid $color-border-light;
 }
 
-.card-body, .card-header {
-  padding: 1rem;
+.styles {
+  @extend .col-md-10, %card;
 }
-.card-header {
-	border-bottom: 1px solid $color-border-light;
+
+section {
+  margin-bottom: 1em;
+  border-bottom: 1px solid $color-border-light;
+  padding-bottom: 2em;
+  h2 {
+    font-weight: bold;
+  }
 }
 
 /* Buttons */
+
+.buttons {
+  button {
+    margin-right: 1em;
+  }
+}
 
 .btn-primary {
   color: $color-white;
@@ -94,6 +118,71 @@ section {
     border-color: darken($color-blue-sinai, 10%);
     color: $color-white;
   }
+}
+
+/* Colors */
+
+.swatch {
+  @extend %card;
+  padding: 0;
+}
+
+.swatch-preview {
+  height: 3.75em;
+  border-bottom: 1px solid $color-border-light;
+}
+
+.swatch-details {
+  @extend %clean-ul;
+  padding: 0.5em 1em;
+}
+
+.color-black {
+  background-color: $color-black;
+}
+
+.color-blue-sinai {
+  background-color: $color-blue-sinai;
+}
+
+.color-gray-light {
+  background-color: $color-gray-light;
+}
+
+.color-gray-medium {
+  background-color: $color-gray-medium;
+}
+
+.color-beige-light {
+  background-color: $color-beige-light;
+}
+
+.color-green {
+  background-color: $color-green;
+}
+
+.color-red {
+  background-color: $color-red;
+}
+
+.color-white {
+  background-color: $color-white;
+}
+
+.color-white-smoke {
+  background-color: $color-white-smoke;
+}
+
+/* Form Inputs */
+
+.control-label {
+  font-weight: normal;
+}
+
+/* Icons */
+
+.icon-list {
+  @extend %clean-ul;
 }
 
 
