@@ -8,7 +8,7 @@ title: Cycledash Style Guide
 .container
 	.content
 		.navigation
-			ul.navigation-items
+			ul.clean-ul
 				li
 					a href="#buttons" Buttons
 				li
@@ -18,11 +18,7 @@ title: Cycledash Style Guide
 				li
 					a href="#icons" Icons
 				li
-					a href="#links" Links
-				li
 					a href="#modals" Modals
-				li
-					a href="#states" States
 				li
 					a href="#tables" Tables
 				li
@@ -119,20 +115,22 @@ title: Cycledash Style Guide
 									li #f32d2d
 									li $color-red
 
-			section
+			section.form-inputs
 				h2#form-inputs Form Inputs
 				p Some text here.
 				.component
 					.row
-						.col-md-6
+						.col-md-6.form-group.required
 						  label.control-label Project Name
 						  input.form-control placeholder="PT01234" type="text"
 
 			section
 				h2#icons Icons
-				p Some text here.
+				p 
+					| All icons are using 
+					a href="http://getbootstrap.com/components/#glyphicons" Bootstrap glyphicons.
 				.component
-					.icon-list
+					ul.clean-ul
 						li 
 							span.glyphicon.glyphicon-remove aria-hidden="true" 
 							span  Close/Error
@@ -167,17 +165,104 @@ title: Cycledash Style Guide
 							span.glyphicon.glyphicon-zoom-out aria-hidden="true" 
 							span  Zoom out
 
-
-			section
-				h2#links Links
 			section
 				h2#modals Modals
-			section
-				h2#states States
+				p Some text here.
+				.component
+					button.btn.btn-primary data-toggle="modal" data-target="#myModal" Launch demo modal
+				#myModal.modal.fade role="dialog" tabindex="-1" 
+				  .modal-dialog role="document" 
+				    button.close data-dismiss="modal" aria-label="Close" ×
+				    form.add-form action="/api/projects" method="POST" 
+				      .row  
+				        h3 New Project
+				        .required.form-group.add-form-input-full
+				          label.control-label Project Name
+				          input.form-control name="name" placeholder="PT01234" type="text"
+				        .form-group.add-form-input-full
+				          label.control-label Notes
+				          textarea.form-control.add-form-notes name="notes" placeholder="Notes etc." rows="3" 
+				        .form-group.add-form-input-full
+				          button.add-form-submit data-dismiss="modal" aria-label="Close" Submit New Project
 			section
 				h2#tables Tables
-			section
+				.component
+					h3 Project Table
+					table.runs-table
+					  thead
+					    tr
+					      th.caller-name Caller Name
+					      th.date Submitted
+					      th.num-variants Variants
+					      th.linked-bams Linked BAMs
+					      th.task-labels
+					      th.num-comments
+					      th.examine-col
+					  tbody 
+					    tr.run
+					      td.caller-name Modal test
+					      td.date title=("Wed, 22 Jul 2015 11:08:54 GMT") 2015-07-22
+					      td.num-variants 0
+					      td.bam-labe
+					      td.labels
+					      td.comments
+					      td.run-id
+					        a.btn.btn-default.btn-xs href="/runs/16/examine" Examine
+					    tr.run
+					      td.caller-name Modal Test
+					      td.date title=("Fri, 10 Jul 2015 13:21:31 GMT") 2015-07-10
+					      td.num-variants 0
+					      td.bam-labels
+					        span.linked-bam title=("Normal BAM") Normal exome
+					        span.linked-bam title=("Tumor BAM") Tumor BAM
+					      td.labels
+					      td.comments
+					      td.run-id
+					        a.btn.btn-default.btn-xs href="/runs/13/examine"  Examine
+					    tr.run
+					      td.caller-name Strelka
+					      td.date title=("Mon, 08 Jun 2015 13:56:50 GMT") 2015-06-08 
+					      td.num-variants 12
+					      td.bam-labels
+					        span.linked-bam title=("Tumor BAM")  Tumor BAM
+					        span.linked-bam title=("Normal BAM")  Normal exome
+					      td.labels
+					      td.comments
+					        div
+					          span 11
+					          span.comment-bubble
+					      td.run-id
+					        a.btn.btn-default.btn-xs href="/runs/10/examine"  Examine
+					    tr.run
+					      td.caller-name
+					      td.date title=("Wed, 03 Jun 2015 12:40:20 GMT") 2015-06-03 
+					      td.num-variants 63328
+					      td.bam-labels 
+					        span.linked-bam title=("Normal BAM")  Normal exome
+					      td.labels
+					      td.comments
+					        div
+					          span 1
+					          span.comment-bubble
+					      td.run-id
+					        a.btn.btn-default.btn-xs href="/runs/9/examine" Examine
+					h3 VCF Table
+			section.typography
 				h2#typography Typography
+				p Some text here.
+				.component
+					ul.clean-ul
+						li 
+							h1 Hello, I'm an h1
+						li 
+							h2 Hello, I'm an h2
+						li
+							h3 Hello, I'm an h3
+						li
+							h4 Hello, I'm an h4
+						li
+							a href="#" Here is a link
+						li.text-dim This is deemphasized text, commonly used in empty states and time stamps.
 			section
 				h2#projects Projects
 			section

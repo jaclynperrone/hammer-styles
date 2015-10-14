@@ -4,34 +4,30 @@
 
 @charset "utf-8";
 
+html, body {
+  font-size: 16px;
+}
 body {
-	font-size: 16px;
 	background-color: $color-bg-body;
 	color: $color-text;
 	font-family: "Open Sans", helvetica, arial, sans-serif;
 }
-
 * {
 	box-sizing: border-box;
 }
-
 li {
   line-height: 2em;
 }
-
 a {
   color: $color-link;
   &:hover {
-    text-decoration: none;
     color: darken($color-link, 15%);
   }
 }
-
-%clean-ul {
+.clean-ul {
   list-style: none;
   padding: 0;
 }
-
 .content {
   @extend .row;
 }
@@ -44,13 +40,11 @@ a {
   border-bottom: 1px solid $color-border-light;
   margin-bottom: 1em;
 }
-
 .header-text {
 	margin: 0;
   font-size: 1em;
   display: inline-block;
 }
-
 .header-logo {
 	text-indent: -9999px;
   display: inline-block;
@@ -66,15 +60,6 @@ a {
 .navigation {
   @extend .col-md-2;
 }
-
-.navigation-items {
-  @extend %clean-ul;
-
-	li {
-		display: block;
-	}
-}
-
 .component {
   margin-top: 2em;
 }
@@ -87,11 +72,9 @@ a {
   box-shadow: 1px 1px 1px 0px $color-bg-body-dark;
   border: 1px solid $color-border-light;
 }
-
 .styles {
   @extend .col-md-10, %card;
 }
-
 section {
   margin-bottom: 1em;
   border-bottom: 1px solid $color-border-light;
@@ -108,7 +91,6 @@ section {
     margin-right: 1em;
   }
 }
-
 .btn-primary {
   color: $color-white;
   background-color: $color-blue-sinai;
@@ -126,49 +108,38 @@ section {
   @extend %card;
   padding: 0;
 }
-
 .swatch-preview {
   height: 3.75em;
   border-bottom: 1px solid $color-border-light;
 }
-
 .swatch-details {
-  @extend %clean-ul;
+  @extend .clean-ul;
   padding: 0.5em 1em;
 }
-
 .color-black {
   background-color: $color-black;
 }
-
 .color-blue-sinai {
   background-color: $color-blue-sinai;
 }
-
 .color-gray-light {
   background-color: $color-gray-light;
 }
-
 .color-gray-medium {
   background-color: $color-gray-medium;
 }
-
 .color-beige-light {
   background-color: $color-beige-light;
 }
-
 .color-green {
   background-color: $color-green;
 }
-
 .color-red {
   background-color: $color-red;
 }
-
 .color-white {
   background-color: $color-white;
 }
-
 .color-white-smoke {
   background-color: $color-white-smoke;
 }
@@ -178,11 +149,186 @@ section {
 .control-label {
   font-weight: normal;
 }
-
-/* Icons */
-
-.icon-list {
-  @extend %clean-ul;
+.form-group.required .control-label:after {
+  content:"*";
+  color: $color-red;
+}
+.form-inputs .form-group {
+  margin-bottom: 0;
 }
 
+/* Modals */
 
+.add-form {
+  @extend .col-md-12;
+  background: $color-bg-body-dark;
+  border: 1px solid $color-border-light;
+  border-radius: $radius;
+  margin: 1em 0;
+  h3 {
+    @extend .col-md-12;
+    margin: 15px 0;
+  }
+}
+.add-form-input-half {
+  @extend .col-md-6;
+}
+.add-form-input-full {
+  @extend .col-md-12;
+}
+.form-control.add-form-notes {
+  height: 8em;
+}
+.close {
+  position: absolute;
+  top: 1.75rem;
+  right: 1rem;
+  z-index: 1;
+}
+.add-form-submit {
+  @extend .btn, .btn-primary;
+  float: right;
+}
+
+/* Tables */
+
+.table {
+  font-size: 0.875em; /* 14/16 */
+  color: $color-text;
+  border-collapse: separate;
+  background-color: $color-white;
+  border-bottom: 1px solid $color-border-light;
+  td {
+    word-wrap: break-word;
+    &:first-child {
+      border-left: 1px solid $color-border-light;
+    }
+    &:last-child {
+      border-right: 1px solid $color-border-light;
+    }
+  }
+  thead {
+    font-size:0.75rem;
+    text-transform: uppercase;
+    tr {
+      th {
+        background-color: $color-bg-body;
+        font-weight: normal;
+        letter-spacing: 1px;
+        border-bottom: 0;
+
+        &:first-child {
+          border-top-left-radius: $radius;
+        }
+        &:last-child {
+          border-top-right-radius: $radius;
+        }
+      }
+    }
+  }
+}
+.table tbody tr {
+  cursor: pointer;
+}
+.table tbody tr.selected {
+  background: $color-bg-hover;
+}
+.table tbody tr:hover {
+  background: $color-bg-hover;
+}
+.runs-table, .bams-table {
+  @extend .table;
+  table-layout: fixed;
+  margin: 0;
+}
+main#runs .runs-table tr.info > td, main#runs .bams-table tr.info > td {
+  background-color: $color-bg-expanded;
+}
+input.selector {
+  margin-right: 13px;
+}
+td .label {
+  margin: 0 3px 0 3px;
+}
+.runs-table .labels .fail, .runs-table .labels .run {
+  font-size: 0.875em;
+}
+.runs-table .labels .fail {
+  @extend .glyphicon-remove;
+}
+.runs-table .labels .fail::before{
+  @extend .glyphicon;
+  color: $color-status-error;
+  padding-right: 0.25em;
+  font-size: 10px;
+}
+.runs-table .labels .fail::after {
+  color: $color-status-error;
+  content: 'Failed';
+}
+.runs-table .labels .run::after {
+  color: $color-blue-sinai;
+  content: 'Uploading...';
+}
+span.comment-bubble {
+  @extend .glyphicon, .glyphicon-comment;
+  margin-left: 0.5em;
+  font-size: 0.625rem;
+}
+td.comments {
+  text-align: right;
+  white-space: nowrap;
+}
+.runs-table .run-id, .runs-table .date {
+  white-space: nowrap;
+}
+.runs-table .run-id {
+  text-align: right;
+}
+.runs-table .caller-name {
+  width: 27%;
+}
+.runs-table .date {
+  width: 13%;
+}
+.runs-table .num-variants {
+  width: 13%;
+}
+.runs-table .linked-bams {
+  width: 20%;
+}
+.runs-table .task-labels {
+  width: 10%;
+}
+.runs-table .num-comments {
+  width: 7%;
+}
+.runs-table .examine-col {
+  width: 10%;
+}
+.bams-table .bam-name {
+  width: 30%;
+}
+.bams-table .resection-date {
+  width: 21%;
+}
+.bams-table .tissues {
+  width: 50%;
+}
+.linked-bam {
+  display: block;
+}
+
+/* Typography */
+
+.text-dim {
+  color: $color-text-dim;
+}
+.typography {
+  .clean-ul {
+    h1, h2, h3, h4 {
+    font-weight: normal;
+    margin: 0 0 1em 0;
+    }
+  }
+}
