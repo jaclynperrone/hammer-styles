@@ -16,7 +16,7 @@ body {
 	box-sizing: border-box;
 }
 li {
-  line-height: 2em;
+  line-height: 2.5em;
 }
 a {
   color: $color-link;
@@ -66,21 +66,16 @@ a {
 
 /* Styleguide content */
 
-%card {
-  background-color: $color-white-smoke;
-  border-radius: $radius;
-  box-shadow: 1px 1px 1px 0px $color-bg-body-dark;
-  border: 1px solid $color-border-light;
-}
 .styles {
-  @extend .col-md-10, %card;
+  @extend .col-md-10;
 }
 section {
+  @extend .card;
   margin-bottom: 1em;
-  border-bottom: 1px solid $color-border-light;
-  padding-bottom: 2em;
+  padding: 1em;
   h2 {
     font-weight: bold;
+    margin-top: 0;
   }
 }
 
@@ -102,11 +97,38 @@ section {
   }
 }
 
+/* Cards */
+
+.card {
+  background-color: $color-white-smoke;
+  border-radius: $radius;
+  box-shadow: 1px 1px 1px 0px $color-bg-body-dark;
+  border: 1px solid $color-border-light;
+}
+.card-body, .card-header {
+  padding: 1rem;
+}
+.card-header {
+  border-bottom: 1px solid $color-border-light;
+  h3 {
+    margin-top: 0;
+  }
+  p {
+    margin: 0;
+  }
+}
+.card-body {
+  p {
+    margin: 0;
+  }
+}
+
 /* Colors */
 
 .swatch {
-  @extend %card;
+  @extend .card;
   padding: 0;
+  overflow: hidden;
 }
 .swatch-preview {
   height: 3.75em;
@@ -142,6 +164,57 @@ section {
 }
 .color-white-smoke {
   background-color: $color-white-smoke;
+}
+
+/* Commments */
+.author-name {
+  font-weight: bold;
+  float: left;
+}
+.comments .comment-text {
+  padding: 0.5em 0;
+  p {
+    margin: 0;
+  }
+}
+.comments .time {
+  font-size: 0.875em;
+  color: $color-text-dim;
+}
+.comment-view-container {
+  border-top: 1px solid $color-border-light;
+  border-left: 1px solid $color-border-light;
+  border-right: 1px solid $color-border-light;
+  padding: 1em;
+  background-color: $color-white-smoke;
+}
+.comments:last-of-type {
+  .comment-view-container {
+    border-bottom: 1px solid $color-border-light;
+  }
+}
+.comment-header {
+  @extend .clearfix;
+}
+.edit-buttons {
+  float: right;
+}
+.comment-delete, .comment-edit {
+  color: $color-text;
+  font-size: 0.75rem;
+  &:before {
+    @extend .glyphicon;
+  }
+  &:hover {
+    color: $color-text;
+  }
+}
+.comment-delete {
+  @extend .glyphicon-trash;
+  margin-left: 0.75em;
+}
+.comment-edit {
+  @extend .glyphicon-pencil;
 }
 
 /* Form Inputs */

@@ -12,7 +12,11 @@ title: Cycledash Style Guide
 				li
 					a href="#buttons" Buttons
 				li
+					a href="#projects" Cards
+				li
 					a href="#colors" Colors
+				li
+					a href="#comments" Comments
 				li
 					a href="#form-inputs" Form Inputs
 				li
@@ -23,34 +27,43 @@ title: Cycledash Style Guide
 					a href="#tables" Tables
 				li
 					a href="#typography" Typography
-				li
-					a href="#projects" Projects
-				li
-					a href="#comments" Comments
 
 		.styles
 			section.buttons
 				h2#buttons Buttons
 				.component
-					h3 Primary
+					h3 Primary action
 					p Some text explaining what this is for
 					button.btn.btn-primary Default
 					button.btn.btn-primary.btn-xs Extra small
 				.component
-					h3 Success
-					p Some text explaining what this is for
-					button.btn.btn-success Default
-				.component
-					h3 Secondary
+					h3 Secondary action
 					p Some text explaining what this is for. Some text explaining what this is for
 					button.btn.btn-default Default
 					button.btn.btn-default.btn-xs Extra small
+				.component
+					h3 Form submit
+					p Some text explaining what this is for
+					button.btn.btn-success Default
 				.component
 					h3 + Glyphicon
 					p Some text explaining what this is for
 					button.btn.btn-primary.btn-xs
 						span.glyphicon.glyphicon-save aria-hidden="true"
 						|  Save glyphicon
+
+			section
+				h2#projects Cards
+				.component
+					.card
+					  .card-header
+					    h3 Card Title
+					    p This is a card subtitle.
+					  .card-body
+					    p 
+					    	| This the contents of the card. Right now in Cycledash, cards contain either a 
+						    a href="#tables" project table 
+						    | on the Projects page, or a description list on the About page.
 
 			section.colors
 				h2#colors Colors
@@ -115,6 +128,32 @@ title: Cycledash Style Guide
 									li #f32d2d
 									li $color-red
 
+			section
+				h2#comments Comments
+				.component
+					.comments
+					  .comment-view-container
+					    .comment-header
+					      .author-name
+					        b Jane Smith
+					      .edit-buttons
+					        a.comment-edit
+					        a.comment-delete
+					    .comment-text 
+					      p This is comment one
+					    .time 17 days ago
+					.comments
+					  .comment-view-container
+					    .comment-header
+					      .author-name
+					        b John Thompson
+					      .edit-buttons
+					        a.comment-edit
+					        a.comment-delete
+					    .comment-text 
+					      p This is comment two
+					    .time a month ago
+
 			section.form-inputs
 				h2#form-inputs Form Inputs
 				p Some text here.
@@ -137,6 +176,12 @@ title: Cycledash Style Guide
 						li 
 							span.glyphicon.glyphicon-comment aria-hidden="true" 
 							span  Comments
+						li 
+							span.glyphicon.glyphicon-trash aria-hidden="true" 
+							span  Delete
+						li 
+							span.glyphicon.glyphicon-pencil aria-hidden="true" 
+							span  Edit
 						li 
 							span.glyphicon.glyphicon-question-sign aria-hidden="true" 
 							span  Help
@@ -263,7 +308,4 @@ title: Cycledash Style Guide
 						li
 							a href="#" Here is a link
 						li.text-dim This is deemphasized text, commonly used in empty states and time stamps.
-			section
-				h2#projects Projects
-			section
-				h2#comments Comment
+
