@@ -29,31 +29,41 @@ title: Cycledash Style Guide
 					a href="#typography" Typography
 
 		.styles
+			section
+				h2 Hello!
+				p 
+				| The following is a tour throughout the different components and styles on Cycledash. We use 
+				a href="http://getbootstrap.com/" target="_blank" Bootstrap
+				| , which means even more documentation can be found on their website. 
+
+
 			section.buttons
 				h2#buttons Buttons
+				p Buttons are used to perform an action. For example, when submitting a form or examining data.
 				.component
 					h3 Primary action
-					p Some text explaining what this is for
+					p Use these to direct your user to the most important actions on the page.
 					button.btn.btn-primary Default
 					button.btn.btn-primary.btn-xs Extra small
 				.component
 					h3 Secondary action
-					p Some text explaining what this is for. Some text explaining what this is for
+					p These acknowledge that there is an action to take, but that it's not the most important one.
 					button.btn.btn-default Default
 					button.btn.btn-default.btn-xs Extra small
 				.component
 					h3 Form submit
-					p Some text explaining what this is for
+					p These are to denote that the action will submit or save data.
 					button.btn.btn-success Default
 				.component
 					h3 + Glyphicon
-					p Some text explaining what this is for
+					p Adding a universal symbol can make the action clearer and more understandable.
 					button.btn.btn-primary.btn-xs
 						span.glyphicon.glyphicon-save aria-hidden="true"
 						|  Save glyphicon
 
 			section
 				h2#projects Cards
+				p Turning information into something physical adds hierarchy and organization to the page. 
 				.component
 					.card
 					  .card-header
@@ -156,18 +166,33 @@ title: Cycledash Style Guide
 
 			section.form-inputs
 				h2#form-inputs Form Inputs
-				p Some text here.
 				.component
 					.row
 						.col-md-6.form-group.required
-						  label.control-label Project Name
-						  input.form-control placeholder="PT01234" type="text"
+						  label.control-label Required Field
+						  input.form-control placeholder="Placeholder text" type="text"
+						.col-md-6.form-group
+						  label.control-label Not So Required Field
+						  input.form-control placeholder="Placeholder text" type="text"
+				.component
+					.row
+						.col-md-6.form-group
+						  label.control-label Notes
+						  textarea.form-control style="height:8em" placeholder="Type your notes here." type="text"
+						.col-md-6.form-group
+						  label.control-label Dropdown
+						  select.form-control
+						  	option Select one 
+						  	option Option 1
+						  	option Option 2
+						  	option Option 3
 
 			section
 				h2#icons Icons
 				p 
-					| All icons are using 
-					a href="http://getbootstrap.com/components/#glyphicons" Bootstrap glyphicons.
+					| Icons add a visual language that will grab your user's attention and increase their understanding of the actions and elements on the page. Icons should be used sparingly, for too many can result in dilution and decoration. 
+					| All icons in Cycledash are using 
+					a href="http://getbootstrap.com/components/#glyphicons" target="_blank" Bootstrap glyphicons.
 				.component
 					ul.clean-ul
 						li 
@@ -212,7 +237,7 @@ title: Cycledash Style Guide
 
 			section
 				h2#modals Modals
-				p Some text here.
+				p Use modals when you want your user to focus on performing a particular task. For example, uploading data or reading an important disclaimer.
 				.component
 					button.btn.btn-primary data-toggle="modal" data-target="#myModal" Launch demo modal
 				#myModal.modal.fade role="dialog" tabindex="-1" 
@@ -231,6 +256,7 @@ title: Cycledash Style Guide
 				          button.add-form-submit data-dismiss="modal" aria-label="Close" Submit New Project
 			section
 				h2#tables Tables
+				p Tables are used to collect and show groups of tabular data. For example, projects and vcfs are arranged in tables with headers that apply to each column of data. Some rows expand to reveal more information about that particular row.
 				.component
 					h3 Project Table
 					table.runs-table
@@ -294,7 +320,7 @@ title: Cycledash Style Guide
 					h3 VCF Table
 			section.typography
 				h2#typography Typography
-				p Some text here.
+				p Different font sizes, colors and emphases help convey hierarchy of information on a page. Consistency is key to building patterns that will help your user recognize and parse information effortlessly.
 				.component
 					ul.clean-ul
 						li 
