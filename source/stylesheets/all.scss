@@ -63,6 +63,13 @@ a {
 .component {
   margin-top: 2em;
 }
+.navigation-ul {
+  @extend .clean-ul;
+}
+.fixed-navigation {
+  position: fixed;
+  top: 0;
+}
 
 /* Styleguide content */
 
