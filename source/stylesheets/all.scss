@@ -58,7 +58,7 @@ a {
 /* Left-side navigation */
 
 .navigation {
-  @extend .col-md-2;
+  @extend .col-xs-2;
 }
 .component {
   margin-top: 2em;
@@ -74,7 +74,7 @@ a {
 /* Styleguide content */
 
 .styles {
-  @extend .col-md-10;
+  @extend .col-xs-10;
 }
 section {
   @extend .card;
